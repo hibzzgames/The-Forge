@@ -588,8 +588,6 @@ void registerDynamicTextWidgetLua(const UIWidget* pWidget)
 
 #endif
 
-#endif
-
 static void RegisterDefaultLuaFunctions(LuaManager* pManager)
 {
     pManager->SetFunction("LOGINFO",
@@ -624,6 +622,8 @@ static void RegisterDefaultLuaFunctions(LuaManager* pManager)
                               return 1;
                           });
 }
+
+#endif
 
 ////////////////////////////////
 // PUBLIC INTERFACE FUNCTIONS //

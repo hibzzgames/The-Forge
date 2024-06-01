@@ -427,7 +427,7 @@ void addLogFile(const char* filename, FileMode file_mode, LogLevel log_level) {}
 void addLogCallback(const char* id, uint32_t log_level, void* user_data, LogCallbackFn callback, LogCloseFn close, LogFlushFn flush) {}
 
 void writeLog(uint32_t level, const char* filename, int line_number, const char* message, va_list args) {}
-void writeLog(uint32_t level, const char* filename, int line_number, const char* message, ...) {}
+//void writeLog(uint32_t level, const char* filename, int line_number, const char* message, ...) {}
 void writeRawLog(uint32_t level, bool error, const char* message, ...) {}
 
 void _FailedAssert(const char* file, int line, const char* statement, const char* msgFmt, ...) {}

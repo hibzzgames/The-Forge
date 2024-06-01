@@ -2474,7 +2474,9 @@ void uiNewFrame()
         }
     }
 #endif
+#if ENABLE_FORGE_UI
     pUserInterface->mDynamicTexturesCount = 0;
+#endif
     ImGui::NewFrame();
 }
 
