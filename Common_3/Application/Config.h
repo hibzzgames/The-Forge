@@ -24,6 +24,7 @@
 #pragma once
 
 // Support external config file override
+#define EXTERNAL_CONFIG_FILEPATH "../../Configs/CustomConfig.h"
 #if defined(EXTERNAL_CONFIG_FILEPATH)
 #include EXTERNAL_CONFIG_FILEPATH
 #elif defined(EXTERNAL_CONFIG_FILEPATH_NO_STRING)
@@ -391,7 +392,6 @@ COMPILE_ASSERT(sizeof(ssize_t) == sizeof(int64_t));
 #if defined(_DEBUG) && defined(NDEBUG)
 #error "_DEBUG and NDEBUG are defined at the same time"
 #endif
-#endif
 
 //////////////////////////////////////////////
 //// ImGui Remote Control
@@ -400,4 +400,6 @@ COMPILE_ASSERT(sizeof(ssize_t) == sizeof(int64_t));
 #if defined(ANDROID) || defined(_WIN32) || defined(PROSPERO) || defined(XBOX) || defined(__APPLE__) || defined(ORBIS)
 #define ENABLE_FORGE_REMOTE_UI
 #endif
+#endif
+
 #endif
